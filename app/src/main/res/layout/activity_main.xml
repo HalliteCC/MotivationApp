@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5E103B"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+
+
+        <ImageView
+            android:id="@+id/img_infinty"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toStartOf="@+id/img_smile"
+            android:src="@drawable/baseline_all_inclusive_24"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/img_smile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="75dp"
+            android:src="@drawable/baseline_tag_faces_24" />
+
+        <ImageView
+            android:id="@+id/img_sun"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="75dp"
+            android:layout_toEndOf="@+id/img_smile"
+            android:src="@drawable/baseline_wb_sunny_24" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_Hello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_top"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="@string/hello_kotlin" />
+
+    <TextView
+        android:id="@+id/text_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:padding="16dp"
+        android:text="@string/app_name" />
+
+    <View
+        android:layout_width="128dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/text_main"
+        android:layout_centerHorizontal="true"
+        android:elevation="5dp"
+        android:background="#5E103B" />
+
+    <Button
+        android:id="@+id/buttonNewPhrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#5E103B"
+        android:text="@string/new_frase" />
+
+</RelativeLayout>

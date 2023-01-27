@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MotivationApp</string>
+    <string name="hello_kotlin">Olá Kotlin</string>
+    <string name="motivation">Motivation</string>
+    <string name="new_frase">nova frase</string>
+    <string name="lets_start">Vamos Começar?</string>
+    <string name="whats_your_name">Qual seu nome?</string>
+    <string name="save">Salvar</string>
+    
+    <string name="validation_mandatory_name">Informe seu nome</string>
+</resources>

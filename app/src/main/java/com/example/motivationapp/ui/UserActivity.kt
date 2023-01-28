@@ -1,12 +1,13 @@
-package com.example.motivationapp
+package com.example.motivationapp.ui
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.motivationapp.infra.MotivationConstants
+import com.example.motivationapp.R
+import com.example.motivationapp.infra.SecurityPreferences
 import com.example.motivationapp.databinding.ActivityUserBinding
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {
@@ -34,7 +35,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         val name = binding.editName.text.toString()
         if (name != "") {
 
-            SecurityPreferences(this).storeString("User_Name", name)
+            SecurityPreferences(this).storeString(MotivationConstants.KEY.USER_NAME, name)
 
             startActivity(Intent(this, MainActivity::class.java))
             finish()

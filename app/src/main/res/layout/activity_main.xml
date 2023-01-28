@@ -24,8 +24,7 @@
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"
             android:layout_toStartOf="@+id/img_smile"
-            android:src="@drawable/baseline_all_inclusive_24"
-            app:tint="@color/white" />
+            android:src="@drawable/baseline_all_inclusive_24" />
 
         <ImageView
             android:id="@+id/img_smile"

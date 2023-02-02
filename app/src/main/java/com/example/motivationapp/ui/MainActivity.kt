@@ -6,6 +6,7 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import com.example.motivationapp.infra.MotivationConstants
 import com.example.motivationapp.R
+import com.example.motivationapp.data.Mock
 import com.example.motivationapp.infra.SecurityPreferences
 import com.example.motivationapp.databinding.ActivityMainBinding
 
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         handleUserName()
         handleFilter(R.id.img_infinty)
-
+        handleNextPhrase()
 
         //events
         binding.buttonNewPhrase.setOnClickListener(this)
@@ -33,14 +34,23 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.imgSun.setOnClickListener(this)
     }
 
+
+    //Button New Phrase
     override fun onClick(view: View) {
         if (view.id == R.id.buttonNewPhrase) {
-            var s = ""
+            handleNextPhrase()
         } else if (view.id in listOf(R.id.img_infinty, R.id.img_smile, R.id.img_sun)) {
             handleFilter(view.id)
         }
     }
 
+
+    //Next Phrase
+    private fun handleNextPhrase (){
+        binding.textMain.text = Mock().getPhrase(categoryId)
+    }
+
+    //Handle the User Name
     private fun handleUserName() {
 
         val name = SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
@@ -48,6 +58,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.textHello.text = "Olá, $name!"
     }
 
+
+    //Changing Icon Colors
     private fun handleFilter(id: Int) {
 
         binding.imgInfinty.setColorFilter(ContextCompat.getColor(this, R.color.gray))

@@ -9,6 +9,7 @@ import com.example.motivationapp.R
 import com.example.motivationapp.data.Mock
 import com.example.motivationapp.infra.SecurityPreferences
 import com.example.motivationapp.databinding.ActivityMainBinding
+import java.util.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -47,7 +48,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     //Next Phrase
     private fun handleNextPhrase (){
-        binding.textMain.text = Mock().getPhrase(categoryId)
+
+        binding.textMain.text = Mock().getPhrase(categoryId, Locale.getDefault().language)
     }
 
     //Handle the User Name
